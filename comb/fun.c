@@ -478,6 +478,7 @@ int main(void){
 	//TIME_IT("AES-CBC-SMALL", aes_cbc(M1, 1, expkey, iv), 16064, 1);
 	TIME_IT("AES-CBC-BIG", aes_cbc(M, 59, expkey, iv), nbytes, 1);
 
+	int a = total_clk;
 
 	puts("round 1");
 	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 59, 6, expkey, iv), nbytes, 1);
