@@ -285,27 +285,13 @@ combScheduler.constprop.0:
 	add	x6, x6, 16
 	bne	.L67
 .L18:
-	ldr	x0, [x4]
 	cmp	x6, x7
+	ldr	x0, [x4]
 	ldr	x22, [x4, 16]
 	ldr	x21, [x4, 32]
 	ldr	x3, [x4, 64]
 	ldr	x20, [x4, 48]
 	ldr	x1, [x4, 80]
-	ldr	q25, [x0, x2]
-	ldr	q23, [x22, x2]
-	ldr	q22, [x21, x2]
-	ldr	q7, [x3, x2]
-	ldr	q31, [x29, 176]
-	ldr	q30, [x29, 192]
-	ldr	q29, [x29, 160]
-	ldr	q27, [x29, 224]
-	ldr	q26, [x19]
-	ldr	q1, [x1, x2]
-	ldr	q20, [x20, x2]
-	ldr	q28, [x29, 208]
-	ldr	q0, [x29, 240]
-	ldr	q24, [x19, 16]
 	eor     v23.16b, v23.16b, v31.16b
     eor     v22.16b, v22.16b, v30.16b
     eor     v25.16b, v25.16b, v29.16b
@@ -438,17 +424,6 @@ combScheduler.constprop.0:
 	str	q3, [x29, 208]
 	str	q1, [x29, 224]
 	str	q0, [x29, 240]
-	str	q16, [x0, x2]
-	ldr	x0, [x4, 16]
-	str	q6, [x0, x2]
-	ldr	x0, [x4, 32]
-	str	q5, [x0, x2]
-	ldr	x0, [x4, 48]
-	str	q3, [x0, x2]
-	ldr	x0, [x4, 64]
-	str	q1, [x0, x2]
-	ldr	x0, [x4, 80]
-	str	q0, [x0, x2]
 	mov	x2, x6
 	bne	.L68
 	.p2align 2
@@ -992,36 +967,13 @@ combScheduler:
 	add	x8, x8, 16
 	bne	.L148
 .L123:
-	ldr	x2, [x19, 16]
 	cmp	x8, x9
+	ldr	x2, [x19, 16]
 	ldr	x0, [x19]
 	ldr	x1, [x19, 80]
 	ldr	q23, [x2, x4]
 	ldr	x2, [x19, 32]
 	ldr	q25, [x0, x4]
-	ldr	q31, [x5, 16]
-	ldr	q22, [x2, x4]
-	ldr	x2, [x19, 48]
-	ldr	q30, [x5, 32]
-	ldr	q29, [x5]
-	ldr	q20, [x2, x4]
-	ldr	x2, [x19, 64]
-	ldr	q27, [x5, 64]
-	ldr	q26, [x23]
-	ldr	q7, [x2, x4]
-	ldr	q1, [x1, x4]
-	ldr	q28, [x5, 48]
-	ldr	q0, [x5, 80]
-	ldr	q24, [x23, 16]
-	ldr	q21, [x23, 32]
-	ldr	q18, [x23, 48]
-	ldr	q17, [x23, 64]
-	ldr	q16, [x23, 80]
-	ldr	q6, [x23, 96]
-	ldr	q5, [x23, 112]
-	ldr	q4, [x23, 128]
-	ldr	q3, [x23, 144]
-	ldr	q2, [x23, 160]
 	eor     v23.16b, v23.16b, v31.16b
     eor     v22.16b, v22.16b, v30.16b
     eor     v25.16b, v25.16b, v29.16b
@@ -1154,23 +1106,6 @@ combScheduler:
 	str	q3, [x6, 48]
 	str	q1, [x6, 64]
 	str	q0, [x6, 80]
-	str	q16, [x5]
-	str	q6, [x5, 16]
-	str	q5, [x5, 32]
-	str	q3, [x5, 48]
-	str	q1, [x5, 64]
-	str	q0, [x5, 80]
-	str	q16, [x0, x4]
-	ldr	x0, [x19, 16]
-	str	q6, [x0, x4]
-	ldr	x0, [x19, 32]
-	str	q5, [x0, x4]
-	ldr	x0, [x19, 48]
-	str	q3, [x0, x4]
-	ldr	x0, [x19, 64]
-	str	q1, [x0, x4]
-	ldr	x0, [x19, 80]
-	str	q0, [x0, x4]
 	mov	x4, x8
 	bne	.L149
 	.p2align 2
