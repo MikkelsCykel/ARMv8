@@ -919,7 +919,6 @@ main:
 	aese	v24.16b, v19.16b
 	aesmc	v28.16b, v28.16b
 	ldr	q23, [x1, 12272]
-	orr	v21.16b, v22.16b, v22.16b
 	eor	v29.16b, v14.16b, v29.16b
 	aesmc	v26.16b, v26.16b
 	eor	v27.16b, v27.16b, v12.16b
@@ -938,7 +937,6 @@ main:
 	aesmc	v25.16b, v25.16b
 	aesmc	v21.16b, v21.16b
 	aesmc	v22.16b, v23.16b
-	orr	v23.16b, v24.16b, v24.16b
 	aese	v28.16b, v18.16b
 	aese	v26.16b, v18.16b
 	aese	v25.16b, v18.16b
@@ -951,7 +949,6 @@ main:
 	aese	v0.16b, v18.16b
 	aesmc	v28.16b, v28.16b
 	aesmc	v24.16b, v25.16b
-	orr	v25.16b, v26.16b, v26.16b
 	aesmc	v29.16b, v29.16b
 	aesmc	v27.16b, v27.16b
 	aesmc	v23.16b, v23.16b
@@ -969,7 +966,6 @@ main:
 	aese	v21.16b, v17.16b
 	aese	v0.16b, v17.16b
 	aesmc	v26.16b, v27.16b
-	orr	v27.16b, v28.16b, v28.16b
 	aesmc	v29.16b, v29.16b
 	aesmc	v25.16b, v25.16b
 	aesmc	v24.16b, v24.16b
@@ -1119,26 +1115,9 @@ main:
 	eor	v10.16b, v24.16b, v2.16b
 	str	q29, [x3]
 	eor	v9.16b, v23.16b, v2.16b
-	str	q28, [x3, 16]
 	eor	v31.16b, v22.16b, v2.16b
-	str	q12, [x3, 32]
 	eor	v30.16b, v21.16b, v2.16b
-	str	q11, [x3, 48]
 	eor	v0.16b, v0.16b, v2.16b
-	str	q10, [x3, 64]
-	str	q9, [x3, 80]
-	str	q31, [x3, 96]
-	str	q30, [x3, 112]
-	str	q0, [x3, 128]
-	str	q29, [x2]
-	str	q28, [x2, 16]
-	str	q12, [x2, 32]
-	str	q11, [x2, 48]
-	str	q10, [x2, 64]
-	str	q9, [x2, 80]
-	str	q31, [x2, 96]
-	str	q30, [x2, 112]
-	str	q0, [x2, 128]
 	str	q29, [x0, -16]
 	str	q28, [x0, 2032]
 	str	q12, [x0, 4080]
