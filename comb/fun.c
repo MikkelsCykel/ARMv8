@@ -37,9 +37,9 @@ __inline uint64_t get_Clks(void) {
 	printf("%g cpb\n", total_clk/(nbytes)/(MULTIPLE));
 
 
-void fun(uint8x16_t out){
+void fun(uint8x16_t out, uint8x16_t k){
   	for (int i = 0; i < 128; i++){
-  		out = vaesmcq_u8(out);
+  		out = vaeseq_u8(out, k);
   	}
 }
 
@@ -50,7 +50,8 @@ int main(void){
   	if (sched_setaffinity(getpid(), sizeof cpuset, &cpuset) != 0) perror("setaffinity");
 
   	uint8x16_t out = {0};
-  	TIME_IT("performance:", fun(out), 614400, 1);
+  	uint8x16_t k = {1};
+  	TIME_IT("performance:", fun(out, k), 614400, 1);
 	
 
 
