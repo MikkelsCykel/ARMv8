@@ -12,7 +12,7 @@
 #define __USE_GNU
 #include <sched.h>
 #include <arm_neon.h>
-#define REPEAT 10000
+#define REPEAT 1000000
 #define WARMUP REPEAT/4
 uint64_t start_clk, end_clk;
 double total_clk;
