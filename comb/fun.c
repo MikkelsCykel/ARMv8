@@ -37,12 +37,11 @@ __inline uint64_t get_Clks(void) {
 	printf("%g cpb\n", total_clk/(nbytes)/(MULTIPLE));
 
 
-void fun(){
+void fun(int out){
 
 	int i;
-	int j = 1;
   	for (int i = 0; i < 128; i++){
-  		j+1;
+  		out += 1;
   	}
 }
 
@@ -52,8 +51,11 @@ int main(void){
   	CPU_ZERO(&cpuset); CPU_SET(7, &cpuset);
   	if (sched_setaffinity(getpid(), sizeof cpuset, &cpuset) != 0) perror("setaffinity");
 
-  	TIME_IT("performance:", fun(), 614400, 1);
+  	int out;
+  	TIME_IT("performance:", fun(out), 614400, 1);
 	
-	return 1;	
+
+
+	return out;	
 
 }
