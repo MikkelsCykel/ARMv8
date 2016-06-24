@@ -920,157 +920,13 @@ main:
 	eor	v28.16b, v13.16b, v28.16b
 	eor	v29.16b, v14.16b, v29.16b
 	aese	v0.16b, v19.16b
-	aese	v22.16b, v19.16b
-	aese	v23.16b, v19.16b
-	aese	v24.16b, v19.16b
-	aese	v25.16b, v19.16b
-	aese	v26.16b, v19.16b
-	aese	v27.16b, v19.16b
-	aese	v28.16b, v19.16b
-	aese	v29.16b, v19.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v18.16b
 	aese	v22.16b, v18.16b
-	aese	v23.16b, v18.16b
-	aese	v24.16b, v18.16b
-	aese	v25.16b, v18.16b
-	aese	v26.16b, v18.16b
-	aese	v27.16b, v18.16b
-	aese	v28.16b, v18.16b
-	aese	v29.16b, v18.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v17.16b
-	aese	v22.16b, v17.16b
 	aese	v23.16b, v17.16b
-	aese	v24.16b, v17.16b
-	aese	v25.16b, v17.16b
-	aese	v26.16b, v17.16b
-	aese	v27.16b, v17.16b
-	aese	v28.16b, v17.16b
-	aese	v29.16b, v17.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v16.16b
-	aese	v22.16b, v16.16b
-	aese	v23.16b, v16.16b
 	aese	v24.16b, v16.16b
-	aese	v25.16b, v16.16b
-	aese	v26.16b, v16.16b
-	aese	v27.16b, v16.16b
-	aese	v28.16b, v16.16b
-	aese	v29.16b, v16.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v7.16b
-	aese	v22.16b, v7.16b
-	aese	v23.16b, v7.16b
-	aese	v24.16b, v7.16b
 	aese	v25.16b, v7.16b
-	aese	v26.16b, v7.16b
-	aese	v27.16b, v7.16b
-	aese	v28.16b, v7.16b
-	aese	v29.16b, v7.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v1.16b
-	aese	v22.16b, v1.16b
-	aese	v23.16b, v1.16b
-	aese	v24.16b, v1.16b
-	aese	v25.16b, v1.16b
 	aese	v26.16b, v1.16b
-	aese	v27.16b, v1.16b
-	aese	v28.16b, v1.16b
-	aese	v29.16b, v1.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v6.16b
-	aese	v22.16b, v6.16b
-	aese	v23.16b, v6.16b
-	aese	v24.16b, v6.16b
-	aese	v25.16b, v6.16b
-	aese	v26.16b, v6.16b
 	aese	v27.16b, v6.16b
-	aese	v28.16b, v6.16b
-	aese	v29.16b, v6.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v5.16b
-	aese	v22.16b, v5.16b
-	aese	v23.16b, v5.16b
-	aese	v24.16b, v5.16b
-	aese	v25.16b, v5.16b
-	aese	v26.16b, v5.16b
-	aese	v27.16b, v5.16b
 	aese	v28.16b, v5.16b
-	aese	v29.16b, v5.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v24.16b, v24.16b
-	aesmc	v25.16b, v25.16b
-	aesmc	v26.16b, v26.16b
-	aesmc	v27.16b, v27.16b
-	aesmc	v28.16b, v28.16b
-	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v4.16b
-	aese	v22.16b, v4.16b
-	aese	v23.16b, v4.16b
-	aese	v24.16b, v4.16b
-	aese	v25.16b, v4.16b
-	aese	v26.16b, v4.16b
-	aese	v27.16b, v4.16b
-	aese	v28.16b, v4.16b
 	aese	v29.16b, v4.16b
 	aesmc	v0.16b, v0.16b
 	aesmc	v22.16b, v22.16b
@@ -1081,24 +937,168 @@ main:
 	aesmc	v27.16b, v27.16b
 	aesmc	v28.16b, v28.16b
 	aesmc	v29.16b, v29.16b
-	aese	v0.16b, v3.16b
-	aese	v22.16b, v3.16b
-	aese	v23.16b, v3.16b
-	aese	v24.16b, v3.16b
-	aese	v25.16b, v3.16b
-	aese	v26.16b, v3.16b
-	aese	v27.16b, v3.16b
-	aese	v28.16b, v3.16b
-	aese	v29.16b, v3.16b
-	eor	v0.16b, v0.16b, v2.16b
-	eor	v22.16b, v22.16b, v2.16b
-	eor	v23.16b, v23.16b, v2.16b
-	eor	v24.16b, v24.16b, v2.16b
-	eor	v25.16b, v25.16b, v2.16b
-	eor	v26.16b, v26.16b, v2.16b
-	eor	v27.16b, v27.16b, v2.16b
-	eor	v28.16b, v28.16b, v2.16b
-	eor	v29.16b, v29.16b, v2.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	aesmc	v0.16b, v0.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v23.16b, v23.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v25.16b, v25.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v27.16b, v27.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v29.16b, v29.16b
+	aese	v0.16b, v19.16b
+	aese	v22.16b, v18.16b
+	aese	v23.16b, v17.16b
+	aese	v24.16b, v16.16b
+	aese	v25.16b, v7.16b
+	aese	v26.16b, v1.16b
+	aese	v27.16b, v6.16b
+	aese	v28.16b, v5.16b
+	aese	v29.16b, v4.16b
+	eor	v0.16b, v0.16b, v19.16b
+	eor	v22.16b, v22.16b, v18.16b
+	eor	v23.16b, v23.16b, v17.16b
+	eor	v24.16b, v24.16b, v16.16b
+	eor	v25.16b, v25.16b, v7.16b
+	eor	v26.16b, v26.16b, v1.16b
+	eor	v27.16b, v27.16b, v6.16b
+	eor	v28.16b, v28.16b, v5.16b
+	eor	v29.16b, v29.16b, v4.16b
 	str	q29, [x3]
 	str	q29, [x0, -16]
 	str	q28, [x0, 2032]
