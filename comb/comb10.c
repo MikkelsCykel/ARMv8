@@ -128,11 +128,9 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[0] = vld1q_u8(&((uint8_t*)M[0].M)[16*(i+completedBlocks)]);
 				block[1] = vld1q_u8(&((uint8_t*)M[1].M)[16*(i+completedBlocks)]);
 				block[2] = vld1q_u8(&((uint8_t*)M[2].M)[16*(i+completedBlocks)]);
-				
 				block[3] = vld1q_u8(&((uint8_t*)M[3].M)[16*(i+completedBlocks)]);
 				block[4] = vld1q_u8(&((uint8_t*)M[4].M)[16*(i+completedBlocks)]);
 				block[5] = vld1q_u8(&((uint8_t*)M[5].M)[16*(i+completedBlocks)]);
-				
 				block[6] = vld1q_u8(&((uint8_t*)M[6].M)[16*(i+completedBlocks)]);
 				block[7] = vld1q_u8(&((uint8_t*)M[7].M)[16*(i+completedBlocks)]);
 				block[8] = vld1q_u8(&((uint8_t*)M[8].M)[16*(i+completedBlocks)]);
@@ -140,30 +138,22 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[0] = veorq_u8(block[0], lblock[0]);
 				block[1] = veorq_u8(block[1], lblock[1]);
 				block[2] = veorq_u8(block[2], lblock[2]);
-
 				block[3] = veorq_u8(block[3], lblock[3]);
 				block[4] = veorq_u8(block[4], lblock[4]);
 				block[5] = veorq_u8(block[5], lblock[5]);
-
 				block[6] = veorq_u8(block[6], lblock[6]);
 				block[7] = veorq_u8(block[7], lblock[7]);
 				block[8] = veorq_u8(block[8], lblock[8]);
 
-				
-				
 				block[0] = vaeseq_u8(block[0], expkey[0]);
 				block[1] = vaeseq_u8(block[1], expkey[0]);
 				block[2] = vaeseq_u8(block[2], expkey[0]);
-
 				block[3] = vaeseq_u8(block[3], expkey[0]);
 				block[4] = vaeseq_u8(block[4], expkey[0]);
 				block[5] = vaeseq_u8(block[5], expkey[0]);
-
 				block[6] = vaeseq_u8(block[6], expkey[0]);
 				block[7] = vaeseq_u8(block[7], expkey[0]);
 				block[8] = vaeseq_u8(block[8], expkey[0]);
-
-
 
 				block[0] = vaesmcq_u8(block[0]);
 				block[1] = vaesmcq_u8(block[1]);
@@ -174,7 +164,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[6] = vaesmcq_u8(block[6]);
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
-
 
 				block[0] = vaeseq_u8(block[0], expkey[1]);
 				block[1] = vaeseq_u8(block[1], expkey[1]);
@@ -186,7 +175,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = vaeseq_u8(block[7], expkey[1]);
 				block[8] = vaeseq_u8(block[8], expkey[1]);
 
-
 				block[0] = vaesmcq_u8(block[0]);
 				block[1] = vaesmcq_u8(block[1]);
 				block[2] = vaesmcq_u8(block[2]);
@@ -196,7 +184,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[6] = vaesmcq_u8(block[6]);
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
-
 
 				block[0] = vaeseq_u8(block[0], expkey[2]);
 				block[1] = vaeseq_u8(block[1], expkey[2]);
@@ -208,7 +195,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = vaeseq_u8(block[7], expkey[2]);
 				block[8] = vaeseq_u8(block[8], expkey[2]);
 
-
 				block[0] = vaesmcq_u8(block[0]);
 				block[1] = vaesmcq_u8(block[1]);
 				block[2] = vaesmcq_u8(block[2]);
@@ -218,7 +204,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[6] = vaesmcq_u8(block[6]);
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
-
 
 				block[0] = vaeseq_u8(block[0], expkey[3]);
 				block[1] = vaeseq_u8(block[1], expkey[3]);
@@ -230,7 +215,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = vaeseq_u8(block[7], expkey[3]);
 				block[8] = vaeseq_u8(block[8], expkey[3]);
 
-
 				block[0] = vaesmcq_u8(block[0]);
 				block[1] = vaesmcq_u8(block[1]);
 				block[2] = vaesmcq_u8(block[2]);
@@ -240,7 +224,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[6] = vaesmcq_u8(block[6]);
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
-
 
 				block[0] = vaeseq_u8(block[0], expkey[4]);
 				block[1] = vaeseq_u8(block[1], expkey[4]);
@@ -332,7 +315,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = vaeseq_u8(block[7], expkey[7]);
 				block[8] = vaeseq_u8(block[8], expkey[7]);
 
-
 				block[0] = vaesmcq_u8(block[0]);
 				block[1] = vaesmcq_u8(block[1]);
 				block[2] = vaesmcq_u8(block[2]);
@@ -342,7 +324,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[6] = vaesmcq_u8(block[6]);
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
-
 
 				block[0] = vaeseq_u8(block[0], expkey[8]);
 				block[1] = vaeseq_u8(block[1], expkey[8]);
@@ -354,7 +335,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = vaeseq_u8(block[7], expkey[8]);
 				block[8] = vaeseq_u8(block[8], expkey[8]);
 
-
 				block[0] = vaesmcq_u8(block[0]);
 				block[1] = vaesmcq_u8(block[1]);
 				block[2] = vaesmcq_u8(block[2]);
@@ -364,7 +344,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[6] = vaesmcq_u8(block[6]);
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
-
 
 				block[0] = vaeseq_u8(block[0], expkey[9]);
 				block[1] = vaeseq_u8(block[1], expkey[9]);
@@ -376,7 +355,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = vaeseq_u8(block[7], expkey[9]);
 				block[8] = vaeseq_u8(block[8], expkey[9]);
 
-
 				block[0] = veorq_u8(block[0], expkey[10]); 
 				block[1] = veorq_u8(block[1], expkey[10]); 
 				block[2] = veorq_u8(block[2], expkey[10]); 
@@ -387,7 +365,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				block[7] = veorq_u8(block[7], expkey[10]); 
 				block[8] = veorq_u8(block[8], expkey[10]); 
 
-
 				lblock[0] = block[0];
 				lblock[1] = block[1];
 				lblock[2] = block[2];
@@ -397,7 +374,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				lblock[6] = block[6];
 				lblock[7] = block[7];
 				lblock[8] = block[8];
-
 				
 				vst1q_u8(&((uint8_t*)M[0].M)[16*(i+completedBlocks)], block[0]);
 				vst1q_u8(&((uint8_t*)M[1].M)[16*(i+completedBlocks)], block[1]);
@@ -408,8 +384,6 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 				vst1q_u8(&((uint8_t*)M[6].M)[16*(i+completedBlocks)], block[6]);
 				vst1q_u8(&((uint8_t*)M[7].M)[16*(i+completedBlocks)], block[7]);
 				vst1q_u8(&((uint8_t*)M[8].M)[16*(i+completedBlocks)], block[8]);
-
-	
 			}
 			completedBlocks += beta[w];
 		} 
