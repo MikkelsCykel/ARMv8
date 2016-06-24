@@ -12,9 +12,7 @@
 #define __USE_GNU
 #include <sched.h>
 #include <arm_neon.h>
-
-
-#define REPEAT 10000
+#define REPEAT 100000
 #define WARMUP REPEAT/4
 uint64_t start_clk, end_clk;
 double total_clk;
@@ -35,25 +33,10 @@ __inline uint64_t get_Clks(void) {
 					end_clk=get_Clks();                  \
 					total_clk=(double)(end_clk-start_clk)*2.1e3/REPEAT;
 
-#define TIME_IT_OUT(name, func, nbytes, MULTIPLE)          	\
-	MEASURE(func);                                       \
-	printf("%g,", total_clk/(nbytes)/(MULTIPLE));
-
 #define TIME_IT(name, func, nbytes, MULTIPLE)          	\
 	printf("%s-%d: ", name, nbytes);                     \
 	MEASURE(func);                                       \
 	printf("%g cpb\n", total_clk/(nbytes)/(MULTIPLE));
-
-void printblock(const unsigned char* x)
-{
-	for (int i = 0; i < 16; i++) {
-		if(i%4 == 0 && i != 0){
-			putchar(' ');
-		}
-		printf("%02x", x[i]);
-	}
-	putchar('\n');
-}
 
 
 struct Message{
@@ -87,36 +70,27 @@ void radixSortDescending (struct Message *M, int n)
 
 int preComputeWindows(struct Message *M, int r, uint16_t *rho, uint16_t *beta)
 {
-	
 	int w = 0;
 	int qlast = 0;
-
-
-	int i = r; // r = 6
-	while (i > 1) // 6,1
+	int i = r; 
+	while (i > 1) 
 	{
-		int q = M[i-1].l; // q = M[5].l
-		int j = i-2; // j = 4
+		int q = M[i-1].l;
+		int j = i-2;
 		while (j >= 0 && M[j].l == q)
 		{
-			j -=1; 	//3,2,1,0
+			j -=1; 	
 		}
-		rho[w] = i; // 6
-		beta[w] = q - qlast; // 1000-0
-		/*printf("q: %d\n", q);
-		printf("qlast: %d\n", qlast);
-		printf("q - qlast: %d\n", q - qlast);
-		printf("beta[w]: %d\n",beta[w]);
-		printf("j: %d\n",j);*/
-		qlast = q; 	// 1000
-		i = j; 	// i=1
-		w += 1; 	// w=1
+		rho[w] = i; 
+		beta[w] = q - qlast;
+		qlast = q; 
+		i = j; 
+		w += 1; 	
 	}
 	if(i == 1)
-	{	
-		//printf("LAST!");
-		rho[w] = 1; 			// message = 1
-		beta[w] = M[0].l-qlast; // block = 
+	{			
+		rho[w] = 1; 			
+		beta[w] = M[0].l-qlast; 
 		w += 1;
 	}
 
@@ -131,11 +105,6 @@ int getLowest(int a, int b){
 void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const char* iv)
 {
 	radixSortDescending(M, k);
-
-	/*for(int i =0; i < k; i++){
-		printf("m.length = %d\n", M[i].l);
-	}*/
-
 	int r, w, i, j, windows,z;
 	uint8x16_t iv1 = vld1q_u8((int8_t *)iv);
 	uint8x16_t block[P];
@@ -146,26 +115,14 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 	while(k>0)
 	{
 		r = getLowest(P, k);
-		/*printf("P is : %d\n", P);
-		printf("k is : %d\n", k);
-		printf("r is : %d\n", r);*/
 		windows = preComputeWindows(M, r, rho, beta);
-		
-		/*for(int i = 0; i < windows; i++){
-			printf("w:%d: blocks %d, messages: %d\n", i+1, beta[i],rho[i]);
-			blockss += beta[i] * rho[i];
-		}*/
 		
 
 		for (int i = 0; i < r; i++){lblock[i] = iv1;}
-
-		
 		int completedBlocks = 0;
 		
 		for(w = 0; w < windows; w++)
 		{	
-
-			//puts("windowing");
 			for (i = 0; i < beta[w]; i++)
 			{
 
@@ -312,12 +269,10 @@ void combScheduler(struct Message *M, int k, int P, uint8x16_t *expkey, const ch
 					
 			}
 			completedBlocks += beta[w];
-			//blockss += beta[w] * rho[w];
 		} 
 		M = M + r;		
 		k -= r;
 	}
-	//printf("blocks = %d\n", blockss);
 }
 	
 int main(void){
@@ -325,11 +280,6 @@ int main(void){
   	CPU_ZERO(&cpuset); CPU_SET(7, &cpuset);
   	if (sched_setaffinity(getpid(), sizeof cpuset, &cpuset) != 0) perror("setaffinity");
 
-	// NIST test key
-	unsigned char key[16] = { 
-		0x2b,0x7e,0x15,0x16,0x28,0xae,0xd2,0xa6,0xab,0xf7,0x15,0x88,0x09,0xcf,0x4f,0x3c
-	};
-	// corresponding expanded key
 	uint8x16_t expkey[11] = {
 		{0x2b,0x7e,0x15,0x16,0x28,0xae,0xd2,0xa6,0xab,0xf7,0x15,0x88,0x09,0xcf,0x4f,0x3c},
 		{0xa0,0xfa,0xfe,0x17,0x88,0x54,0x2c,0xb1,0x23,0xa3,0x39,0x39,0x2a,0x6c,0x76,0x05},
@@ -348,15 +298,11 @@ int main(void){
 		0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D,0x0E,0x0F 
 	};
 
-	int r;
-  	int num;
-
   	struct timespec ts;
   	if (timespec_get(&ts, TIME_UTC) == 0) {
 
   	}
   	srandom(ts.tv_nsec ^ ts.tv_sec);  
-  	r = random();  
 
 
 	unsigned char message0[1*128];
@@ -1276,25 +1222,12 @@ int main(void){
 		m294,m295,m296,m297,m298,m299};
 	int nbytes = 279040;
 
-
-	//TIME_IT("AES-CBC-SMALL", aes_cbc(M1, 1, expkey, iv), 16064, 1);
-	//TIME_IT("AES-CBC-BIG", aes_cbc(M, 31, expkey, iv), nbytes, 1);
-	//int a = total_clk;
-
-	puts("round 1");
-	combScheduler(M, 300, 6, expkey, iv);
 	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 300, 6, expkey, iv), nbytes, 1);
-
-	//int b = total_clk;
-
-	//printf("\nx%f\n\n", (double)a/b);
-	//printblock(M[1].M);
 
 	int x = 0;
 	for (int i = 0; i<300; i++){
 		x ^= M[i].M[0]^M[i].M[(M[i].l*16)-1];
 	}
-
 	printf("\n\nterminated with code %d\n", x);
 	
 	return x;
