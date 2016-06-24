@@ -901,15 +901,15 @@ main:
 	add	x0, x0, 16
 	add	x1, x1, 16
 	cmp	x0, x4
-	ldr	q14, [x1, -16]
-	ldr	q13, [x1, 2032]
-	ldr	q27, [x1, 4080]
-	ldr	q26, [x1, 6128]
+	ldr	q0, [x1, -16]
+	ldr	q22, [x1, 2032]
+	ldr	q23, [x1, 4080]
+	ldr	q24, [x1, 6128]
 	ldr	q25, [x1, 8176]
-	ldr	q24, [x1, 10224]
-	ldr	q23, [x1, 12272]
-	ldr	q22, [x1, 14320]
-	ldr	q21, [x1, 16368]
+	ldr	q26, [x1, 10224]
+	ldr	q27, [x1, 12272]
+	ldr	q28, [x1, 14320]
+	ldr	q29, [x1, 16368]
 	eor	v0.16b, v21.16b, v0.16b
 	eor	v22.16b, v22.16b, v30.16b
 	eor	v23.16b, v23.16b, v31.16b
