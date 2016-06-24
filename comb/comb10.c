@@ -383,8 +383,6 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+12288], block[6]);
 				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+14336], block[7]);
 				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+16384], block[8]);
-
-				vst1q_u8(&((int8_t*)out)[i], lastblock);
 			}
 			completedBlocks += beta[w];
 		} 
