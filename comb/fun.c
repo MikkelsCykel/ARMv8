@@ -52,7 +52,7 @@ void fun(uint8x16_t b, uint8x16_t k, unsigned char *out){
   	for (int i = 0; i < 128; i++){
   		b = vaeseq_u8(b, k);
   	}
-  	vst1q_u8(&((int8_t*)out), b);
+  	vst1q_u8((int8_t*)out, b);
 }
 
 
