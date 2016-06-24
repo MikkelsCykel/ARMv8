@@ -392,9 +392,9 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 }
 	
 int main(void){
-	cpu_set_t cpuset;
-  	CPU_ZERO(&cpuset); CPU_SET(7, &cpuset);
-  	if (sched_setaffinity(getpid(), sizeof cpuset, &cpuset) != 0) perror("setaffinity");
+	//cpu_set_t cpuset;
+  	//CPU_ZERO(&cpuset); CPU_SET(7, &cpuset);
+  	//if (sched_setaffinity(getpid(), sizeof cpuset, &cpuset) != 0) perror("setaffinity");
 
 	uint8x16_t expkey[11] = {
 		{0x2b,0x7e,0x15,0x16,0x28,0xae,0xd2,0xa6,0xab,0xf7,0x15,0x88,0x09,0xcf,0x4f,0x3c},
