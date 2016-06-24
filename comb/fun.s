@@ -6,6 +6,11 @@
 	.global	fun
 	.type	fun, %function
 fun:
+	mov	w0, 128
+	.p2align 2
+.L2:
+	subs	w0, w0, #1
+	bne	.L2
 	ret
 	.size	fun, .-fun
 	.section	.text.startup,"ax",%progbits
@@ -45,11 +50,8 @@ main:
 	add	x2, x29, 72
 	mov	x1, x20
 	bl	sched_setaffinity
-	cbz	w0, .L3
-	adrp	x0, .LC0
-	add	x0, x0, :lo12:.LC0
-	bl	perror
-.L3:
+	cbnz	w0, .L16
+.L6:
 	adrp	x2, .LC1
 	adrp	x1, .LC2
 	add	x2, x2, :lo12:.LC1
@@ -62,16 +64,25 @@ main:
 	mov	x1, 0
 	add	x0, x29, 56
 	bl	gettimeofday
-	ldp	x2, x3, [x29, 56]
+	ldp	x0, x2, [x29, 56]
+	mov	w1, 10000
+	ldr	d8, .LC3
+	scvtf	d0, x0
+	scvtf	d1, x2
+	fmadd	d0, d0, d8, d1
+	fcvtzu	x0, d0
+	str	x0, [x20, #:lo12:start_clk]
+	.p2align 2
+.L7:
+	mov	w0, 128
+	.p2align 2
+.L8:
+	subs	w0, w0, #1
+	bne	.L8
+	subs	w1, w1, #1
+	bne	.L7
 	mov	x1, 0
 	add	x0, x29, 56
-	add	x19, x19, :lo12:__stack_chk_guard
-	ldr	d8, .LC3
-	scvtf	d1, x3
-	scvtf	d0, x2
-	fmadd	d0, d0, d8, d1
-	fcvtzu	x2, d0
-	str	x2, [x20, #:lo12:start_clk]
 	bl	gettimeofday
 	ldp	x3, x4, [x29, 56]
 	adrp	x6, end_clk
@@ -80,6 +91,7 @@ main:
 	mov	w0, 1
 	ldr	x2, [x20, #:lo12:start_clk]
 	add	x1, x1, :lo12:.LC7
+	add	x19, x19, :lo12:__stack_chk_guard
 	ldr	d1, .LC4
 	scvtf	d3, x3
 	scvtf	d2, x4
@@ -99,12 +111,17 @@ main:
 	ldr	x1, [x19]
 	eor	x1, x0, x1
 	mov	w0, 0
-	cbnz	x1, .L10
+	cbnz	x1, .L17
 	ldp	x19, x20, [sp, 16]
 	ldr	d8, [sp, 32]
 	ldp	x29, x30, [sp], 208
 	ret
-.L10:
+.L16:
+	adrp	x0, .LC0
+	add	x0, x0, :lo12:.LC0
+	bl	perror
+	b	.L6
+.L17:
 	bl	__stack_chk_fail
 	.size	main, .-main
 	.align	3
