@@ -646,7 +646,7 @@ int main(void){
 
 	int x = 0;
 	for (int i = 0; i<37; i++){
-		x ^= M[i].M[0]^M[i].M[M[i].l*16];
+		x ^= M[i].M[0]^M[i].M[(M[i].l*16)-1];
 	}
 
 	printf("terminated with code %d\n", x);
