@@ -493,7 +493,7 @@ int main(void){
 
 
 	puts("round 1");
-	TIME_IT("AES-CBC-COMP-P2", combScheduler(M, 37, 6, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-COMP-P2", combScheduler(M, 37, 12, expkey, iv), nbytes, 1);
 
 	/*TIME_IT_OUT("AES-CBC-COMP-P1", combScheduler(M, 31, 1, expkey, iv), nbytes, 1);
 	TIME_IT_OUT("AES-CBC-COMP-P2", combScheduler(M, 31, 2, expkey, iv), nbytes, 1);
