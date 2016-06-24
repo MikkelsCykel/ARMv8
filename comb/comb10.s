@@ -901,15 +901,6 @@ main:
 	add	x0, x0, 16
 	add	x1, x1, 16
 	cmp	x0, x4
-	str	q29, [x3]
-	str	q29, [x0, -16]
-	str	q28, [x0, 2032]
-	str	q12, [x0, 4080]
-	str	q11, [x0, 6128]
-	str	q10, [x0, 8176]
-	str	q9, [x0, 10224]
-	str	q31, [x0, 12272]
-	str	q30, [x0, 14320]
 	str	q0, [x0, 16368]
 	bne	.L93
 .L95:
