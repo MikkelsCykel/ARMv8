@@ -48,11 +48,11 @@ void printblock(const unsigned char* x)
 }
 
 
-void fun(uint8x16_t out, uint8x16_t k, unsigned char *out){
+void fun(uint8x16_t b, uint8x16_t k, unsigned char *out){
   	for (int i = 0; i < 128; i++){
-  		out = vaeseq_u8(out, k);
+  		b = vaeseq_u8(b, k);
   	}
-  	vst1q_u8(&((int8_t*)out), out);
+  	vst1q_u8(&((int8_t*)out), b);
 }
 
 
