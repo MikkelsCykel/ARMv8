@@ -1207,7 +1207,7 @@ int main(void){
 	TIME_IT("AES-CBC-BIG", aes_cbc(M, 300, expkey, iv), nbytes, 1);
 
 	puts("round 1");
-	TIME_IT("AES-CBC-COMP-P2", combScheduler(M, 31, 2, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-COMP-P2", combScheduler(M, 300, 6, expkey, iv), nbytes, 1);
 
 
 	int x = 0;
