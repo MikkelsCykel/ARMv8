@@ -101,7 +101,7 @@ int getLowest(int a, int b){
 }
 
 
-void combScheduler(const unsigned char Message *M, unsigned char *out, uint8_t *lengths, int k, int P, uint8x16_t *expkey, const char* iv)
+void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths, int k, int P, uint8x16_t *expkey, const char* iv)
 {
 	radixSortDescending(lengths, k);
 	int r, w, i, j, windows,z;
@@ -437,7 +437,7 @@ int main(void){
   		128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,128,
   		128,128,128,128,128,128,128,128,128,128,128,128,128,128};
 
-	TIME_IT("AES-CBC-COMP-P6", combScheduler(message, cipher, lengths, 297, 9, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-COMP-P6", combScheduler(message, cipher, lengths, 297, 9, expkey, iv), 608256, 1);
 
 	int x = 0;
 	for (int i = 0; i<297; i++){
