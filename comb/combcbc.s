@@ -286,12 +286,6 @@ combScheduler.constprop.0:
 	bne	.L67
 .L18:
 	cmp	x6, x7
-	ldr	x0, [x4]
-	ldr	x22, [x4, 16]
-	ldr	x21, [x4, 32]
-	ldr	x3, [x4, 64]
-	ldr	x20, [x4, 48]
-	ldr	x1, [x4, 80]
 	eor     v23.16b, v23.16b, v31.16b
     eor     v22.16b, v22.16b, v30.16b
     eor     v25.16b, v25.16b, v29.16b
@@ -418,12 +412,6 @@ combScheduler.constprop.0:
     eor     v16.16b, v7.16b, v26.16b
     eor     v3.16b, v20.16b, v26.16b
     eor     v0.16b, v0.16b, v26.16b
-	str	q6, [x29, 176]
-	str	q16, [x29, 160]
-	str	q5, [x29, 192]
-	str	q3, [x29, 208]
-	str	q1, [x29, 224]
-	str	q0, [x29, 240]
 	mov	x2, x6
 	bne	.L68
 	.p2align 2
@@ -968,12 +956,6 @@ combScheduler:
 	bne	.L148
 .L123:
 	cmp	x8, x9
-	ldr	x2, [x19, 16]
-	ldr	x0, [x19]
-	ldr	x1, [x19, 80]
-	ldr	q23, [x2, x4]
-	ldr	x2, [x19, 32]
-	ldr	q25, [x0, x4]
 	eor     v23.16b, v23.16b, v31.16b
     eor     v22.16b, v22.16b, v30.16b
     eor     v25.16b, v25.16b, v29.16b
@@ -1100,12 +1082,6 @@ combScheduler:
     eor     v16.16b, v7.16b, v26.16b
     eor     v3.16b, v20.16b, v26.16b
     eor     v0.16b, v0.16b, v26.16b
-	str	q6, [x6, 16]
-	str	q16, [x6]
-	str	q5, [x6, 32]
-	str	q3, [x6, 48]
-	str	q1, [x6, 64]
-	str	q0, [x6, 80]
 	mov	x4, x8
 	bne	.L149
 	.p2align 2
