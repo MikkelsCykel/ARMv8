@@ -48,10 +48,11 @@ void printblock(uint8x16_t x)
 }
 
 
-void fun(uint8x16_t out, uint8x16_t k){
+void fun(uint8x16_t out, uint8x16_t k, unsigned char *out){
   	for (int i = 0; i < 128; i++){
   		out = vaeseq_u8(out, k);
   	}
+  	vst1q_u8(&((int8_t*)out), out);
 }
 
 
@@ -60,9 +61,10 @@ int main(void){
   	CPU_ZERO(&cpuset); CPU_SET(7, &cpuset);
   	if (sched_setaffinity(getpid(), sizeof cpuset, &cpuset) != 0) perror("setaffinity");
 
-  	uint8x16_t out = {0};
+  	uint8x16_t b = {0};
   	uint8x16_t k = {1};
-  	TIME_IT("performance:", fun(out, k), 614400, 1);
+  	unsigned char out[16];
+  	TIME_IT("performance:", fun(b, k, out), 614400, 1);
 	
 
   	printblock(out);
