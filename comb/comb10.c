@@ -103,7 +103,7 @@ int getLowest(int a, int b){
 
 void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths, int k, int P, uint8x16_t *expkey, const char* iv)
 {
-	radixSortDescending(lengths, k);
+	//radixSortDescending(lengths, k);
 	int r, w, i, j, windows,z;
 	uint8x16_t iv1 = vld1q_u8((int8_t *)iv);
 	uint8x16_t block[P];
