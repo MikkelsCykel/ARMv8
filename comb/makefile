@@ -6,8 +6,6 @@ fun-asm:fun.s
 
 fun.s:fun.c
 	aarch64-linux-gnu-gcc-5 -O3 -mcpu=cortex-a57+crypto -static -S -o $@ $^
-	scp fun-asm phone:mikkel/report/
-
 
 combcbc-asm:combcbc.s
 	aarch64-linux-gnu-gcc-5 -O3 -mcpu=cortex-a57+crypto -static -s -o $@ $^
