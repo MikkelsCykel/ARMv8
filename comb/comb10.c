@@ -439,10 +439,10 @@ int main(void){
 
 	TIME_IT("AES-CBC-COMP-P6", combScheduler(message, cipher, lengths, 297, 9, expkey, iv), 608256, 1);
 
-	int x = 0;
-	for (int i = 0; i<297; i++){
-		x ^= M[i].M[0]^M[i].M[(M[i].l*16)-1];
-	}
+	int x = 123;
+	//for (int i = 0; i<297; i++){
+	x ^= M[0]^M[608255];
+	//}
 	printf("\n\nterminated with code %d\n", x);
 	
 	return x;
