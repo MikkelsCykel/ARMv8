@@ -901,15 +901,6 @@ main:
 	add	x0, x0, 16
 	add	x1, x1, 16
 	cmp	x0, x4
-	ldr	q0, [x1, -16]
-	ldr	q22, [x1, 2032]
-	ldr	q23, [x1, 4080]
-	ldr	q24, [x1, 6128]
-	ldr	q25, [x1, 8176]
-	ldr	q26, [x1, 10224]
-	ldr	q27, [x1, 12272]
-	ldr	q28, [x1, 14320]
-	ldr	q29, [x1, 16368]
 	str	q29, [x3]
 	str	q29, [x0, -16]
 	str	q28, [x0, 2032]
