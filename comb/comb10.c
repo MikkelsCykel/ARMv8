@@ -145,193 +145,13 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 				block[8] = veorq_u8(block[8], lblock[8]);
 
 				block[0] = vaeseq_u8(block[0], expkey[0]);
-				block[1] = vaeseq_u8(block[1], expkey[0]);
-				block[2] = vaeseq_u8(block[2], expkey[0]);
-				block[3] = vaeseq_u8(block[3], expkey[0]);
-				block[4] = vaeseq_u8(block[4], expkey[0]);
-				block[5] = vaeseq_u8(block[5], expkey[0]);
-				block[6] = vaeseq_u8(block[6], expkey[0]);
-				block[7] = vaeseq_u8(block[7], expkey[0]);
-				block[8] = vaeseq_u8(block[8], expkey[0]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[1]);
 				block[1] = vaeseq_u8(block[1], expkey[1]);
-				block[2] = vaeseq_u8(block[2], expkey[1]);
-				block[3] = vaeseq_u8(block[3], expkey[1]);
-				block[4] = vaeseq_u8(block[4], expkey[1]);
-				block[5] = vaeseq_u8(block[5], expkey[1]);
-				block[6] = vaeseq_u8(block[6], expkey[1]);
-				block[7] = vaeseq_u8(block[7], expkey[1]);
-				block[8] = vaeseq_u8(block[8], expkey[1]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[2]);
-				block[1] = vaeseq_u8(block[1], expkey[2]);
 				block[2] = vaeseq_u8(block[2], expkey[2]);
-				block[3] = vaeseq_u8(block[3], expkey[2]);
-				block[4] = vaeseq_u8(block[4], expkey[2]);
-				block[5] = vaeseq_u8(block[5], expkey[2]);
-				block[6] = vaeseq_u8(block[6], expkey[2]);
-				block[7] = vaeseq_u8(block[7], expkey[2]);
-				block[8] = vaeseq_u8(block[8], expkey[2]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[3]);
-				block[1] = vaeseq_u8(block[1], expkey[3]);
-				block[2] = vaeseq_u8(block[2], expkey[3]);
 				block[3] = vaeseq_u8(block[3], expkey[3]);
-				block[4] = vaeseq_u8(block[4], expkey[3]);
-				block[5] = vaeseq_u8(block[5], expkey[3]);
-				block[6] = vaeseq_u8(block[6], expkey[3]);
-				block[7] = vaeseq_u8(block[7], expkey[3]);
-				block[8] = vaeseq_u8(block[8], expkey[3]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[4]);
-				block[1] = vaeseq_u8(block[1], expkey[4]);
-				block[2] = vaeseq_u8(block[2], expkey[4]);
-				block[3] = vaeseq_u8(block[3], expkey[4]);
 				block[4] = vaeseq_u8(block[4], expkey[4]);
-				block[5] = vaeseq_u8(block[5], expkey[4]);
-				block[6] = vaeseq_u8(block[6], expkey[4]);
-				block[7] = vaeseq_u8(block[7], expkey[4]);
-				block[8] = vaeseq_u8(block[8], expkey[4]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[5]);
-				block[1] = vaeseq_u8(block[1], expkey[5]);
-				block[2] = vaeseq_u8(block[2], expkey[5]);
-				block[3] = vaeseq_u8(block[3], expkey[5]);
-				block[4] = vaeseq_u8(block[4], expkey[5]);
 				block[5] = vaeseq_u8(block[5], expkey[5]);
-				block[6] = vaeseq_u8(block[6], expkey[5]);
-				block[7] = vaeseq_u8(block[7], expkey[5]);
-				block[8] = vaeseq_u8(block[8], expkey[5]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[5]);
-				block[1] = vaeseq_u8(block[1], expkey[5]);
-				block[2] = vaeseq_u8(block[2], expkey[5]);
-				block[3] = vaeseq_u8(block[3], expkey[5]);
-				block[4] = vaeseq_u8(block[4], expkey[5]);
-				block[5] = vaeseq_u8(block[5], expkey[5]);
-				block[6] = vaeseq_u8(block[6], expkey[5]);
-				block[7] = vaeseq_u8(block[7], expkey[5]);
-				block[8] = vaeseq_u8(block[8], expkey[5]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[6]);
-				block[1] = vaeseq_u8(block[1], expkey[6]);
-				block[2] = vaeseq_u8(block[2], expkey[6]);
-				block[3] = vaeseq_u8(block[3], expkey[6]);
-				block[4] = vaeseq_u8(block[4], expkey[6]);
-				block[5] = vaeseq_u8(block[5], expkey[6]);
 				block[6] = vaeseq_u8(block[6], expkey[6]);
-				block[7] = vaeseq_u8(block[7], expkey[6]);
-				block[8] = vaeseq_u8(block[8], expkey[6]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[7]);
-				block[1] = vaeseq_u8(block[1], expkey[7]);
-				block[2] = vaeseq_u8(block[2], expkey[7]);
-				block[3] = vaeseq_u8(block[3], expkey[7]);
-				block[4] = vaeseq_u8(block[4], expkey[7]);
-				block[5] = vaeseq_u8(block[5], expkey[7]);
-				block[6] = vaeseq_u8(block[6], expkey[7]);
 				block[7] = vaeseq_u8(block[7], expkey[7]);
-				block[8] = vaeseq_u8(block[8], expkey[7]);
-
-				block[0] = vaesmcq_u8(block[0]);
-				block[1] = vaesmcq_u8(block[1]);
-				block[2] = vaesmcq_u8(block[2]);
-				block[3] = vaesmcq_u8(block[3]);
-				block[4] = vaesmcq_u8(block[4]);
-				block[5] = vaesmcq_u8(block[5]);
-				block[6] = vaesmcq_u8(block[6]);
-				block[7] = vaesmcq_u8(block[7]);
-				block[8] = vaesmcq_u8(block[8]);
-
-				block[0] = vaeseq_u8(block[0], expkey[8]);
-				block[1] = vaeseq_u8(block[1], expkey[8]);
-				block[2] = vaeseq_u8(block[2], expkey[8]);
-				block[3] = vaeseq_u8(block[3], expkey[8]);
-				block[4] = vaeseq_u8(block[4], expkey[8]);
-				block[5] = vaeseq_u8(block[5], expkey[8]);
-				block[6] = vaeseq_u8(block[6], expkey[8]);
-				block[7] = vaeseq_u8(block[7], expkey[8]);
 				block[8] = vaeseq_u8(block[8], expkey[8]);
 
 				block[0] = vaesmcq_u8(block[0]);
@@ -344,25 +164,203 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 				block[7] = vaesmcq_u8(block[7]);
 				block[8] = vaesmcq_u8(block[8]);
 
-				block[0] = vaeseq_u8(block[0], expkey[9]);
-				block[1] = vaeseq_u8(block[1], expkey[9]);
-				block[2] = vaeseq_u8(block[2], expkey[9]);
-				block[3] = vaeseq_u8(block[3], expkey[9]);
-				block[4] = vaeseq_u8(block[4], expkey[9]);
-				block[5] = vaeseq_u8(block[5], expkey[9]);
-				block[6] = vaeseq_u8(block[6], expkey[9]);
-				block[7] = vaeseq_u8(block[7], expkey[9]);
-				block[8] = vaeseq_u8(block[8], expkey[9]);
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
 
-				block[0] = veorq_u8(block[0], expkey[10]); 
-				block[1] = veorq_u8(block[1], expkey[10]); 
-				block[2] = veorq_u8(block[2], expkey[10]); 
-				block[3] = veorq_u8(block[3], expkey[10]); 
-				block[4] = veorq_u8(block[4], expkey[10]); 
-				block[5] = veorq_u8(block[5], expkey[10]); 
-				block[6] = veorq_u8(block[6], expkey[10]); 
-				block[7] = veorq_u8(block[7], expkey[10]); 
-				block[8] = veorq_u8(block[8], expkey[10]); 
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = vaesmcq_u8(block[0]);
+				block[1] = vaesmcq_u8(block[1]);
+				block[2] = vaesmcq_u8(block[2]);
+				block[3] = vaesmcq_u8(block[3]);
+				block[4] = vaesmcq_u8(block[4]);
+				block[5] = vaesmcq_u8(block[5]);
+				block[6] = vaesmcq_u8(block[6]);
+				block[7] = vaesmcq_u8(block[7]);
+				block[8] = vaesmcq_u8(block[8]);
+
+				block[0] = vaeseq_u8(block[0], expkey[0]);
+				block[1] = vaeseq_u8(block[1], expkey[1]);
+				block[2] = vaeseq_u8(block[2], expkey[2]);
+				block[3] = vaeseq_u8(block[3], expkey[3]);
+				block[4] = vaeseq_u8(block[4], expkey[4]);
+				block[5] = vaeseq_u8(block[5], expkey[5]);
+				block[6] = vaeseq_u8(block[6], expkey[6]);
+				block[7] = vaeseq_u8(block[7], expkey[7]);
+				block[8] = vaeseq_u8(block[8], expkey[8]);
+
+				block[0] = veorq_u8(block[0], expkey[0]); 
+				block[1] = veorq_u8(block[1], expkey[1]); 
+				block[2] = veorq_u8(block[2], expkey[2]); 
+				block[3] = veorq_u8(block[3], expkey[3]); 
+				block[4] = veorq_u8(block[4], expkey[4]); 
+				block[5] = veorq_u8(block[5], expkey[5]); 
+				block[6] = veorq_u8(block[6], expkey[6]); 
+				block[7] = veorq_u8(block[7], expkey[7]); 
+				block[8] = veorq_u8(block[8], expkey[8]); 
 
 				lblock[0] = block[0];
 				lblock[1] = block[1];
