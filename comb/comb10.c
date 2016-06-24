@@ -124,16 +124,15 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 		{	
 			for (i = 0; i < beta[w]; i++)
 			{
-
-				block[0] = vld1q_u8(&((uint8_t*)M[0])[16*(i+completedBlocks)]);
-				block[1] = vld1q_u8(&((uint8_t*)M[1*2048])[16*(i+completedBlocks)]);
-				block[2] = vld1q_u8(&((uint8_t*)M[2*2048])[16*(i+completedBlocks)]);
-				block[3] = vld1q_u8(&((uint8_t*)M[3*2048])[16*(i+completedBlocks)]);
-				block[4] = vld1q_u8(&((uint8_t*)M[4*2048])[16*(i+completedBlocks)]);
-				block[5] = vld1q_u8(&((uint8_t*)M[5*2048])[16*(i+completedBlocks)]);
-				block[6] = vld1q_u8(&((uint8_t*)M[6*2048])[16*(i+completedBlocks)]);
-				block[7] = vld1q_u8(&((uint8_t*)M[7*2048])[16*(i+completedBlocks)]);
-				block[8] = vld1q_u8(&((uint8_t*)M[(8*2048)])[16*(i+completedBlocks)]);
+				block[0] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)]);
+				block[1] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+2048]);
+				block[2] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+4096]);
+				block[3] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+6144]);
+				block[4] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+8192]);
+				block[5] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+10240]);
+				block[6] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+12288]);
+				block[7] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+14336]);
+				block[8] = vld1q_u8(&((uint8_t*)M)[16*(i+completedBlocks)+16384]);
 
 				block[0] = veorq_u8(block[0], lblock[0]);
 				block[1] = veorq_u8(block[1], lblock[1]);
@@ -375,15 +374,17 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 				lblock[7] = block[7];
 				lblock[8] = block[8];
 				
-				vst1q_u8(&((uint8_t*)out[0])[16*(i+completedBlocks)], block[0]);
-				vst1q_u8(&((uint8_t*)out[1*2048])[16*(i+completedBlocks)], block[1]);
-				vst1q_u8(&((uint8_t*)out[2*2048])[16*(i+completedBlocks)], block[2]);
-				vst1q_u8(&((uint8_t*)out[3*2048])[16*(i+completedBlocks)], block[3]);
-				vst1q_u8(&((uint8_t*)out[4*2048])[16*(i+completedBlocks)], block[4]);
-				vst1q_u8(&((uint8_t*)out[5*2048])[16*(i+completedBlocks)], block[5]);
-				vst1q_u8(&((uint8_t*)out[6*2048])[16*(i+completedBlocks)], block[6]);
-				vst1q_u8(&((uint8_t*)out[7*2048])[16*(i+completedBlocks)], block[7]);
-				vst1q_u8(&((uint8_t*)out[8*2048])[16*(i+completedBlocks)], block[8]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)], block[0]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+2048], block[1]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+4096], block[2]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+6144], block[3]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+8192], block[4]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+10240], block[5]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+12288], block[6]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+14336], block[7]);
+				vst1q_u8(&((uint8_t*)out)[16*(i+completedBlocks)+16384], block[8]);
+
+				vst1q_u8(&((int8_t*)out)[i], lastblock);
 			}
 			completedBlocks += beta[w];
 		} 
@@ -441,7 +442,7 @@ int main(void){
 
 	int x = 123;
 	//for (int i = 0; i<297; i++){
-	x ^= M[0]^M[608255];
+	x ^= message[0]^message[608255];
 	//}
 	printf("\n\nterminated with code %d\n", x);
 	
