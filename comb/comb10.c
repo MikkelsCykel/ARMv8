@@ -1322,7 +1322,7 @@ struct Message m298 = { message298, 128 };
 unsigned char message299[16*128];
 for(int i = 0; i < 128*16; i++){ message299[i] = random(); }
 struct Message m299 = { message299, 128 };
-struct Message M[300] = {m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,
+struct Message M[297] = {m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,
 	m20,m21,m22,m23,m24,m25,m26,m27,m28,m29,m30,m31,m32,m33,m34,m35,m36,m37,m38,m39,m40,m41,m42,
 	m43,m44,m45,m46,m47,m48,m49,m50,m51,m52,m53,m54,m55,m56,m57,m58,m59,m60,m61,m62,m63,m64,m65,
 	m66,m67,m68,m69,m70,m71,m72,m73,m74,m75,m76,m77,m78,m79,m80,m81,m82,m83,m84,m85,m86,m87,m88,
@@ -1336,8 +1336,8 @@ struct Message M[300] = {m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m
 	m228,m229,m230,m231,m232,m233,m234,m235,m236,m237,m238,m239,m240,m241,m242,m243,m244,m245,m246,m247,
 	m248,m249,m250,m251,m252,m253,m254,m255,m256,m257,m258,m259,m260,m261,m262,m263,m264,m265,m266,m267,
 	m268,m269,m270,m271,m272,m273,m274,m275,m276,m277,m278,m279,m280,m281,m282,m283,m284,m285,m286,m287,
-	m288,m289,m290,m291,m292,m293,m294,m295,m296,m297,m298,m299};
-int nbytes = 614400;
+	m288,m289,m290,m291,m292,m293,m294,m295,m296};
+int nbytes = 608256;
 
 	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 300, 9, expkey, iv), nbytes, 1);
 
