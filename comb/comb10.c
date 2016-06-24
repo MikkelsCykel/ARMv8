@@ -110,7 +110,7 @@ void combScheduler(const unsigned char *M, unsigned char *out, uint8_t *lengths,
 	uint8x16_t lblock[P];
 	uint16_t rho[P];
 	uint16_t beta[P];
-	int blockss = 0;
+	//int blockss = 0;
 	while(k>0)
 	{
 		r = getLowest(P, k);
