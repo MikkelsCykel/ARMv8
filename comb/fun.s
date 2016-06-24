@@ -98,7 +98,7 @@ main:
 	ldr	x0, [x29, 200]
 	ldr	x1, [x19]
 	eor	x1, x0, x1
-	mov	w0, 1
+	mov	w0, 0
 	cbnz	x1, .L10
 	ldp	x19, x20, [sp, 16]
 	ldr	d8, [sp, 32]
