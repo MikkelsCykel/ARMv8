@@ -1211,11 +1211,11 @@ int main(void){
 
 
 	//TIME_IT("AES-CBC-SMALL", aes_cbc(M1, 1, expkey, iv), 16064, 1);
-	TIME_IT("AES-CBC-BIG", aes_cbc(M, 37, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-BIG", aes_cbc(M, 300, expkey, iv), nbytes, 1);
 
 
 	puts("round 1");
-	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 37, 6, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 300, 6, expkey, iv), nbytes, 1);
 
 	/*TIME_IT_OUT("AES-CBC-COMP-P1", combScheduler(M, 31, 1, expkey, iv), nbytes, 1);
 	TIME_IT_OUT("AES-CBC-COMP-P2", combScheduler(M, 31, 2, expkey, iv), nbytes, 1);
