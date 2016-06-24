@@ -490,10 +490,10 @@ int main(void){
 
 	//TIME_IT("AES-CBC-SMALL", aes_cbc(M1, 1, expkey, iv), 16064, 1);
 	TIME_IT("AES-CBC-BIG", aes_cbc(M, 37, expkey, iv), nbytes, 1);
-	int a = total_clk;
+
 
 	puts("round 1");
-	TIME_IT_OUT("AES-CBC-COMP-P2", combScheduler(M, 37, 2, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-COMP-P2", combScheduler(M, 37, 6, expkey, iv), nbytes, 1);
 
 	/*TIME_IT_OUT("AES-CBC-COMP-P1", combScheduler(M, 31, 1, expkey, iv), nbytes, 1);
 	TIME_IT_OUT("AES-CBC-COMP-P2", combScheduler(M, 31, 2, expkey, iv), nbytes, 1);
@@ -641,9 +641,7 @@ int main(void){
 
 
 */
-	int b = total_clk;
 
-	printf("\nx%f\n\n", (double)a/b);
 	//printblock(M[1].M);
 
 	int x = 0;
