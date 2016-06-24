@@ -379,198 +379,9 @@ combScheduler:
 	ldr	q28, [x1, 48]
 	ldr	q27, [x1, 64]
 	ldr	q0, [x1, 80]
-	b	.L49
 	.p2align 3
 .L67:
 	add	x5, x5, 16
-.L49:
-	ldr	x6, [x19]
-	cmp	x12, x5
-	ldr	x11, [x19, 16]
-	ldr	x10, [x19, 32]
-	ldr	x8, [x19, 64]
-	ldr	x9, [x19, 48]
-	ldr	x7, [x19, 80]
-	ldr	q25, [x6, x0]
-	ldr	q23, [x11, x0]
-	ldr	q22, [x10, x0]
-	ldr	q16, [x8, x0]
-	eor	v25.16b, v25.16b, v31.16b
-	ldr	q1, [x7, x0]
-	eor	v23.16b, v23.16b, v30.16b
-	ldr	q20, [x9, x0]
-	eor	v22.16b, v22.16b, v29.16b
-	ldr	q26, [x24]
-	eor	v16.16b, v16.16b, v27.16b
-	eor	v0.16b, v1.16b, v0.16b
-	ldr	q24, [x24, 16]
-	eor	v20.16b, v20.16b, v28.16b
-	orr	v1.16b, v16.16b, v16.16b
-	ldr	q21, [x24, 32]
-	aese	v25.16b, v26.16b
-	ldr	q19, [x24, 48]
-	aese	v23.16b, v26.16b
-	aese	v22.16b, v26.16b
-	ldr	q18, [x24, 64]
-	aese	v20.16b, v26.16b
-	aese	v1.16b, v26.16b
-	ldr	q17, [x24, 80]
-	aese	v0.16b, v26.16b
-	aesmc	v22.16b, v22.16b
-	ldr	q7, [x24, 96]
-	aesmc	v25.16b, v25.16b
-	aesmc	v23.16b, v23.16b
-	ldr	q6, [x24, 112]
-	aesmc	v16.16b, v20.16b
-	aesmc	v1.16b, v1.16b
-	orr	v20.16b, v22.16b, v22.16b
-	ldr	q5, [x24, 128]
-	aesmc	v0.16b, v0.16b
-	aese	v23.16b, v24.16b
-	ldr	q4, [x24, 144]
-	aese	v25.16b, v24.16b
-	aese	v20.16b, v24.16b
-	ldr	q2, [x24, 160]
-	aese	v16.16b, v24.16b
-	aese	v1.16b, v24.16b
-	aese	v0.16b, v24.16b
-	aesmc	v22.16b, v23.16b
-	aesmc	v24.16b, v25.16b
-	aesmc	v20.16b, v20.16b
-	aesmc	v16.16b, v16.16b
-	aese	v22.16b, v21.16b
-	aesmc	v1.16b, v1.16b
-	orr	v23.16b, v24.16b, v24.16b
-	aesmc	v0.16b, v0.16b
-	aese	v20.16b, v21.16b
-	aese	v16.16b, v21.16b
-	aese	v23.16b, v21.16b
-	aese	v1.16b, v21.16b
-	aese	v0.16b, v21.16b
-	aesmc	v21.16b, v22.16b
-	aesmc	v23.16b, v23.16b
-	aesmc	v20.16b, v20.16b
-	aesmc	v16.16b, v16.16b
-	aese	v21.16b, v19.16b
-	aesmc	v1.16b, v1.16b
-	orr	v22.16b, v23.16b, v23.16b
-	aese	v20.16b, v19.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v21.16b, v21.16b
-	aese	v22.16b, v19.16b
-	aese	v16.16b, v19.16b
-	aese	v1.16b, v19.16b
-	aese	v0.16b, v19.16b
-	aesmc	v19.16b, v20.16b
-	orr	v20.16b, v21.16b, v21.16b
-	aesmc	v22.16b, v22.16b
-	aesmc	v16.16b, v16.16b
-	aesmc	v1.16b, v1.16b
-	aese	v20.16b, v18.16b
-	aese	v19.16b, v18.16b
-	aesmc	v0.16b, v0.16b
-	aese	v22.16b, v18.16b
-	aese	v16.16b, v18.16b
-	aese	v1.16b, v18.16b
-	aese	v0.16b, v18.16b
-	aesmc	v20.16b, v20.16b
-	aesmc	v18.16b, v19.16b
-	aesmc	v21.16b, v22.16b
-	aesmc	v16.16b, v16.16b
-	orr	v19.16b, v20.16b, v20.16b
-	aesmc	v1.16b, v1.16b
-	aese	v18.16b, v17.16b
-	aesmc	v0.16b, v0.16b
-	aese	v21.16b, v17.16b
-	aese	v19.16b, v17.16b
-	aese	v16.16b, v17.16b
-	aese	v1.16b, v17.16b
-	aese	v0.16b, v17.16b
-	aesmc	v17.16b, v18.16b
-	aesmc	v19.16b, v19.16b
-	aesmc	v20.16b, v21.16b
-	aesmc	v16.16b, v16.16b
-	aese	v17.16b, v7.16b
-	orr	v18.16b, v19.16b, v19.16b
-	aesmc	v1.16b, v1.16b
-	aese	v20.16b, v7.16b
-	aese	v16.16b, v7.16b
-	aesmc	v17.16b, v17.16b
-	aesmc	v0.16b, v0.16b
-	aese	v18.16b, v7.16b
-	aese	v1.16b, v7.16b
-	aesmc	v19.16b, v20.16b
-	aese	v0.16b, v7.16b
-	aesmc	v7.16b, v16.16b
-	orr	v16.16b, v17.16b, v17.16b
-	aesmc	v18.16b, v18.16b
-	aese	v19.16b, v6.16b
-	aesmc	v1.16b, v1.16b
-	aese	v16.16b, v6.16b
-	aese	v18.16b, v6.16b
-	aese	v7.16b, v6.16b
-	aesmc	v0.16b, v0.16b
-	aesmc	v16.16b, v16.16b
-	aesmc	v19.16b, v19.16b
-	aese	v1.16b, v6.16b
-	aese	v0.16b, v6.16b
-	aesmc	v17.16b, v18.16b
-	aesmc	v6.16b, v7.16b
-	orr	v18.16b, v19.16b, v19.16b
-	orr	v7.16b, v16.16b, v16.16b
-	aesmc	v1.16b, v1.16b
-	aesmc	v0.16b, v0.16b
-	aese	v17.16b, v5.16b
-	aese	v18.16b, v5.16b
-	aese	v7.16b, v5.16b
-	aese	v6.16b, v5.16b
-	aese	v1.16b, v5.16b
-	aese	v0.16b, v5.16b
-	aesmc	v18.16b, v18.16b
-	aesmc	v7.16b, v7.16b
-	aesmc	v16.16b, v17.16b
-	aesmc	v5.16b, v6.16b
-	aesmc	v1.16b, v1.16b
-	orr	v17.16b, v18.16b, v18.16b
-	aesmc	v0.16b, v0.16b
-	orr	v6.16b, v7.16b, v7.16b
-	aese	v16.16b, v4.16b
-	aese	v5.16b, v4.16b
-	aese	v17.16b, v4.16b
-	aese	v6.16b, v4.16b
-	aese	v1.16b, v4.16b
-	eor	v30.16b, v16.16b, v2.16b
-	aese	v0.16b, v4.16b
-	eor	v28.16b, v5.16b, v2.16b
-	eor	v31.16b, v17.16b, v2.16b
-	eor	v29.16b, v6.16b, v2.16b
-	eor	v27.16b, v1.16b, v2.16b
-	str	q30, [x4, 16]
-	eor	v0.16b, v0.16b, v2.16b
-	str	q28, [x4, 48]
-	str	q31, [x4]
-	str	q29, [x4, 32]
-	str	q27, [x4, 64]
-	str	q0, [x4, 80]
-	str	q31, [x1]
-	str	q30, [x1, 16]
-	str	q29, [x1, 32]
-	str	q28, [x1, 48]
-	str	q27, [x1, 64]
-	str	q0, [x1, 80]
-	str	q31, [x6, x0]
-	ldr	x6, [x19, 16]
-	str	q30, [x6, x0]
-	ldr	x6, [x19, 32]
-	str	q29, [x6, x0]
-	ldr	x6, [x19, 48]
-	str	q28, [x6, x0]
-	ldr	x6, [x19, 64]
-	str	q27, [x6, x0]
-	ldr	x6, [x19, 80]
-	str	q0, [x6, x0]
-	mov	x0, x5
-	bne	.L67
 .L51:
 	add	x30, x30, 1
 	add	w22, w22, w21
@@ -6372,6 +6183,161 @@ main:
 	ldr	x5, [x12, 64]
 	ldr	x4, [x12, 80]
 	.p2align 2
+.L384:
+	add	x0, x11, x3
+	add	x3, x3, 16
+	cmp	x10, x3
+	ldr	q31, [x9, x0]
+	ldr	q29, [x8, x0]
+	ldr	q27, [x7, x0]
+	ldr	q25, [x6, x0]
+	eor	v30.16b, v31.16b, v30.16b
+	ldr	q23, [x5, x0]
+	eor	v28.16b, v29.16b, v28.16b
+	ldr	q21, [x4, x0]
+	eor	v26.16b, v27.16b, v26.16b
+	aese	v30.16b, v19.16b
+	eor	v24.16b, v25.16b, v24.16b
+	aese	v28.16b, v19.16b
+	eor	v22.16b, v23.16b, v22.16b
+	aese	v26.16b, v19.16b
+	aesmc	v30.16b, v30.16b
+	eor	v0.16b, v21.16b, v0.16b
+	aese	v24.16b, v19.16b
+	aesmc	v28.16b, v28.16b
+	aese	v22.16b, v19.16b
+	aesmc	v26.16b, v26.16b
+	aese	v0.16b, v19.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aese	v30.16b, v18.16b
+	aesmc	v0.16b, v0.16b
+	aese	v28.16b, v18.16b
+	aese	v26.16b, v18.16b
+	aese	v24.16b, v18.16b
+	aese	v22.16b, v18.16b
+	aese	v0.16b, v18.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v17.16b
+	aese	v28.16b, v17.16b
+	aese	v26.16b, v17.16b
+	aese	v24.16b, v17.16b
+	aese	v22.16b, v17.16b
+	aese	v0.16b, v17.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v16.16b
+	aese	v28.16b, v16.16b
+	aese	v26.16b, v16.16b
+	aese	v24.16b, v16.16b
+	aese	v22.16b, v16.16b
+	aese	v0.16b, v16.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v7.16b
+	aese	v28.16b, v7.16b
+	aese	v26.16b, v7.16b
+	aese	v24.16b, v7.16b
+	aese	v22.16b, v7.16b
+	aese	v0.16b, v7.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v6.16b
+	aese	v28.16b, v6.16b
+	aese	v26.16b, v6.16b
+	aese	v24.16b, v6.16b
+	aese	v22.16b, v6.16b
+	aese	v0.16b, v6.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v5.16b
+	aese	v28.16b, v5.16b
+	aese	v26.16b, v5.16b
+	aese	v24.16b, v5.16b
+	aese	v22.16b, v5.16b
+	aese	v0.16b, v5.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v4.16b
+	aese	v28.16b, v4.16b
+	aese	v26.16b, v4.16b
+	aese	v24.16b, v4.16b
+	aese	v22.16b, v4.16b
+	aese	v0.16b, v4.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v3.16b
+	aese	v28.16b, v3.16b
+	aese	v26.16b, v3.16b
+	aese	v24.16b, v3.16b
+	aese	v22.16b, v3.16b
+	aese	v0.16b, v3.16b
+	aesmc	v30.16b, v30.16b
+	aesmc	v28.16b, v28.16b
+	aesmc	v26.16b, v26.16b
+	aesmc	v24.16b, v24.16b
+	aesmc	v22.16b, v22.16b
+	aesmc	v0.16b, v0.16b
+	aese	v30.16b, v2.16b
+	aese	v28.16b, v2.16b
+	aese	v26.16b, v2.16b
+	aese	v24.16b, v2.16b
+	aese	v22.16b, v2.16b
+	eor	v30.16b, v30.16b, v1.16b
+	aese	v0.16b, v2.16b
+	eor	v28.16b, v28.16b, v1.16b
+	eor	v26.16b, v26.16b, v1.16b
+	eor	v24.16b, v24.16b, v1.16b
+	eor	v22.16b, v22.16b, v1.16b
+	str	q30, [x2]
+	eor	v0.16b, v0.16b, v1.16b
+	str	q28, [x2, 16]
+	str	q26, [x2, 32]
+	str	q24, [x2, 48]
+	str	q22, [x2, 64]
+	str	q0, [x2, 80]
+	str	q30, [x1]
+	str	q28, [x1, 16]
+	str	q26, [x1, 32]
+	str	q24, [x1, 48]
+	str	q22, [x1, 64]
+	str	q0, [x1, 80]
+	str	q30, [x9, x0]
+	str	q28, [x8, x0]
+	str	q26, [x7, x0]
+	str	q24, [x6, x0]
+	str	q22, [x5, x0]
+	str	q0, [x4, x0]
+	bne	.L384
 .L386:
 	add	x13, x13, 1
 	add	w15, w15, w14
