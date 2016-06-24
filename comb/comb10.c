@@ -1339,10 +1339,10 @@ struct Message M[297] = {m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m
 	m288,m289,m290,m291,m292,m293,m294,m295,m296};
 int nbytes = 608256;
 
-	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 300, 9, expkey, iv), nbytes, 1);
+	TIME_IT("AES-CBC-COMP-P6", combScheduler(M, 297, 9, expkey, iv), nbytes, 1);
 
 	int x = 0;
-	for (int i = 0; i<300; i++){
+	for (int i = 0; i<297; i++){
 		x ^= M[i].M[0]^M[i].M[(M[i].l*16)-1];
 	}
 	printf("\n\nterminated with code %d\n", x);
