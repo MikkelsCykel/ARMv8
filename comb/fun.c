@@ -36,7 +36,7 @@ __inline uint64_t get_Clks(void) {
 	MEASURE(func);                                       \
 	printf("%g cpb\n", total_clk/(nbytes)/(MULTIPLE));
 
-void printblock(uint8x16_t)
+void printblock(uint8x16_t x)
 {
     for (int i = 0; i < 16; i++) {
         if(i%4 == 0 && i != 0){
@@ -66,7 +66,7 @@ int main(void){
 	
 
   	printblock(out);
-  	
+
 	return out[0]^out[15];	
 
 }
