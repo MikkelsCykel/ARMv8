@@ -901,6 +901,15 @@ main:
 	add	x0, x0, 16
 	add	x1, x1, 16
 	cmp	x0, x4
+	ldr	q0, [x1, -16]
+	ldr	q22, [x1, 2032]
+	ldr	q23, [x1, 4080]
+	ldr	q24, [x1, 6128]
+	ldr	q25, [x1, 8176]
+	ldr	q26, [x1, 10224]
+	ldr	q27, [x1, 12272]
+	ldr	q28, [x1, 14320]
+	ldr	q29, [x1, 16368]
 	eor	v0.16b, v21.16b, v0.16b
 	eor	v22.16b, v22.16b, v30.16b
 	eor	v23.16b, v23.16b, v31.16b
@@ -1090,6 +1099,16 @@ main:
 	eor	v27.16b, v27.16b, v2.16b
 	eor	v28.16b, v28.16b, v2.16b
 	eor	v29.16b, v29.16b, v2.16b
+	str	q29, [x3]
+	str	q29, [x0, -16]
+	str	q28, [x0, 2032]
+	str	q12, [x0, 4080]
+	str	q11, [x0, 6128]
+	str	q10, [x0, 8176]
+	str	q9, [x0, 10224]
+	str	q31, [x0, 12272]
+	str	q30, [x0, 14320]
+	str	q0, [x0, 16368]
 	bne	.L93
 .L95:
 	add	x12, x12, 1
